@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import WebKit
 
 class ViewController: UIViewController {
     var articles = [Article]()
@@ -15,20 +16,27 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "New York Times"
         setUpCollectionView()
         fetchPopularArticles() //query doesn't work
         
         //TODO
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView?.reloadData()
+
+    }
+    
     func setUpCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: view.frame.size.width,
-                                 height: view.frame.size.height)
+                                 height: view.frame.size.height - 35.0)
         collectionView = UICollectionView(frame:.zero, collectionViewLayout: layout)
         collectionView?.register(ArticleCollectionViewCell.self, forCellWithReuseIdentifier: ArticleCollectionViewCell.identifier)
-        collectionView?.isPagingEnabled = true
+        collectionView?.isPagingEnabled = false
         collectionView?.dataSource = self
         view.addSubview(collectionView!)
     }
@@ -53,7 +61,7 @@ extension ViewController {
 //        }
 //
         
-        AF.request("https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=hdgTFnuUEyuKFcllIBaAKD3nEuICevCl", headers: headers).responseDecodable(of:Articles.self) { response in
+        AF.request("https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=", headers: headers).responseDecodable(of:Articles.self) { response in
             if let articles = response.value {
                 self.articles = articles.all
                 self.collectionView?.reloadData()
@@ -78,8 +86,19 @@ extension ViewController : UICollectionViewDataSource {
         let article = articles[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArticleCollectionViewCell.identifier, for: indexPath) as! ArticleCollectionViewCell
         cell.configure(with: article)
+        cell.delegate = self
         return cell
     }
     
     
 }
+
+extension ViewController: ArticleCollectionViewDelegate, WKNavigationDelegate{
+    func didTapWebPageButton(with article: Article) {
+        let webViewController = WebViewController()
+        webViewController.url = article.url
+        self.navigationController?.pushViewController(webViewController, animated: true)
+    }
+}
+
+
