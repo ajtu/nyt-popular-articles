@@ -56,12 +56,8 @@ extension ViewController {
             "Accept": "application/json"
         ]
         
-//        AF.request("https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=hdgTFnuUEyuKFcllIBaAKD3nEuICevCl").responseJSON{ (response) in
-//            debugPrint(response.value)
-//        }
-//
-        
-        AF.request("https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=", headers: headers).responseDecodable(of:Articles.self) { response in
+        let apiKey = ""
+        AF.request("https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=\(apiKey)", headers: headers).responseDecodable(of:Articles.self) { response in
             if let articles = response.value {
                 self.articles = articles.all
                 self.collectionView?.reloadData()
