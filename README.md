@@ -11,5 +11,3 @@ Bug: Sometimes Lottie animation freezes when going back from navigationcontrolle
 Unsure if it's a Lottie or UINavigationController issue.
 
 [New York Times](nytimes.gif)
-
-
