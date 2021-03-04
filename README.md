@@ -14,3 +14,5 @@ Add your New York Times API Key at the end of the string in this variable.
 let api-key = ""
 
 ![New York Times](nytimes.gif)
+
+<img src="nytimes.gif" width="48">
