@@ -13,6 +13,5 @@ Unsure if it's a Lottie or UINavigationController issue.
 Add your New York Times API Key at the end of the string in this variable.
 let api-key = ""
 
-![New York Times](nytimes.gif)
 
-<img src="nytimes.gif" width="48">
+![New York Times]<img src="nytimes.gif" width="250" height="250">
