@@ -56,7 +56,7 @@ extension ViewController {
             "Accept": "application/json"
         ]
         
-        let apiKey = ""
+        let apiKey = "hdgTFnuUEyuKFcllIBaAKD3nEuICevCl"
         AF.request("https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=\(apiKey)", headers: headers).responseDecodable(of:Articles.self) { response in
             if let articles = response.value {
                 self.articles = articles.all

@@ -28,10 +28,19 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     }()
 
     private var animationView: AnimationView  = {
+        let randomBool = Bool.random()
+        if randomBool{
         let animation = AnimationView(name:"news")
         animation.contentMode = .scaleAspectFit
         animation.loopMode = .loop
         return animation
+
+        }
+        else {
+        let animation = AnimationView(name:"news1")
+        animation.contentMode = .scaleAspectFit
+        animation.loopMode = .loop
+        return animation}
     }()
     
     private let webPageButton : UIButton = {

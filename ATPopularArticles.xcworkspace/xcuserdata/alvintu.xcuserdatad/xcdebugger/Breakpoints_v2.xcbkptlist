@@ -20,5 +20,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C4041B8-75C9-4874-9EF6-00BDCACB17A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ATPopularArticles/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "fetchPopularArticles()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C4041B8-75C9-4874-9EF6-00BDCACB17A6 - acc226257da44b96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ATPopularArticles.ViewController.fetchPopularArticles() -&gt; ()"
+                  moduleName = "ATPopularArticles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvintu/Downloads/MostPopularArticles/ATPopularArticles/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "665">
+               </Location>
+               <Location
+                  uuid = "3C4041B8-75C9-4874-9EF6-00BDCACB17A6 - e10170dc6603ebe4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;ATPopularArticles.Articles, Alamofire.AFError&gt;) -&gt; () in ATPopularArticles.ViewController.fetchPopularArticles() -&gt; ()"
+                  moduleName = "ATPopularArticles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvintu/Downloads/MostPopularArticles/ATPopularArticles/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "123">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
