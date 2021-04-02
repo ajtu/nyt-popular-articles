@@ -1,6 +1,3 @@
-GOAL:
-A New York Times App that utilizes UICollectionView 
-
 
 Lottie  
 WKWebView  
